@@ -1,0 +1,6 @@
+D:\Zhonghua\cpld_all\CPLD\CpldBase\bin\Release\CpldBase.dll
+D:\Zhonghua\cpld_all\CPLD\CpldBase\bin\Release\CpldBase.pdb
+D:\Zhonghua\cpld_all\CPLD\CpldBase\obj\Release\CpldBase.WaitForm.resources
+D:\Zhonghua\cpld_all\CPLD\CpldBase\obj\Release\CpldBase.csproj.GenerateResource.Cache
+D:\Zhonghua\cpld_all\CPLD\CpldBase\obj\Release\CpldBase.dll
+D:\Zhonghua\cpld_all\CPLD\CpldBase\obj\Release\CpldBase.pdb

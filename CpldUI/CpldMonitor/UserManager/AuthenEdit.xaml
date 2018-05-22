@@ -1,0 +1,28 @@
+﻿<Window x:Class="CpldUI.UserManager.AuthenEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="用户权限管理" Height="386" Width="352" Loaded="Window_Loaded" Icon="/CpldUI;component/logo.ico" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,0,33">
+        <Label Content="当前用户:" Height="28" FontSize="16" HorizontalAlignment="Left"  x:Name="label1" VerticalAlignment="Top" Width="85" Margin="13,22,0,0" />
+        <TextBox IsReadOnly="True" Height="29" FontSize="16" HorizontalAlignment="Left"  x:Name="tbUsername" VerticalAlignment="Top" Width="201" Margin="98,23,0,0" />
+        <GroupBox Header="用户权限选择" Height="282" HorizontalAlignment="Left" Margin="12,64,0,-23" Name="groupBox1" VerticalAlignment="Top" Width="321" FontSize="16" Grid.ColumnSpan="2">
+            <Grid Margin="0,0,0,-2">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0.419"/>
+                        <GradientStop Color="#ADD7EBFD" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+               
+                <CheckBox Name="cb0" Content="标准检测" HorizontalAlignment="Left" Margin="15,25,0,0" VerticalAlignment="Top" />
+                <CheckBox Name="cb1" Content="取样" HorizontalAlignment="Left" Margin="120,25,0,0" VerticalAlignment="Top" />
+                <CheckBox Name="cb2" Content="自检  " HorizontalAlignment="Left" Margin="200,25,0,0" VerticalAlignment="Top" />
+                <CheckBox Name="cb3" Content="检测记录" HorizontalAlignment="Left" Margin="15,70,0,0" VerticalAlignment="Top" />
+                <CheckBox Name="cb4" Content="设定" HorizontalAlignment="Left" Margin="120,70,0,0" VerticalAlignment="Top"/>
+                
+                <Button Content="确认" Height="37" HorizontalAlignment="Left" Margin="59,187,0,0" Name="btnOk" VerticalAlignment="Top" Width="70" IsDefault="True" Click="btnOk_Click"/>
+                <Button Content="取消" Height="37" HorizontalAlignment="Left" Margin="190,187,0,0" Name="btnCancel" VerticalAlignment="Top" Width="70" IsCancel="True"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

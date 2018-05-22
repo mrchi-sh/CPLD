@@ -1,0 +1,138 @@
+﻿<Window x:Class="CpldUI.CheckManager.GraphCheck.GraphicalMangementCable"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:CpldUI.CheckManager.GraphCheck"
+        Title="选择产品" Height="700" Width="1024" MaxHeight="768" MaxWidth="1024" 
+        WindowStartupLocation="CenterScreen" Icon="/CpldUI;component/logo.ico">
+    <Window.Resources>
+        <Style x:Key="CenterAlignmentStyle" TargetType="TextBlock">
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+        <local:GraphicalMangementCableViewModel x:Key="ViewModel"/>
+    </Window.Resources>
+    <Grid Name="Grid" DataContext="{Binding Source={StaticResource ViewModel}}">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="White" Offset="0.419"/>
+                <GradientStop Color="#ADD7EBFD" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="产品信息" FontSize="16" Grid.Row="0">
+            <Grid Background="#FFE6FFFD">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" FontSize="16" Content="产品名:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <TextBox Grid.Column="1" FontSize="16" Margin="0,10" TextWrapping="Wrap" Text="{Binding SearchText}"/>
+                    <Button Grid.Column="2" Margin="0,10" Background="{x:Null}"  Click="btnSearch_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/CpldUI;component/Icon/search.png" Stretch="fill" Height="24" Width="23" />
+                            <TextBlock FontSize="16" Margin="3,-1,0,0" Width="37" Height="21"><Run Text="查找"/></TextBlock>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+                <DataGrid Grid.Row="1" 
+                          Background="White" Margin="0,0,0,0"
+                          AutoGenerateColumns="False"  
+                          CanUserAddRows="False" 
+                          IsReadOnly="True" SelectionMode="Single"  
+                          ItemsSource="{Binding CableList}"
+                          SelectedItem="{Binding SelectedCable}"
+                          MouseDoubleClick="gridSampleSelect_MouseDoubleClick" >
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding ModifyDate}" Header="创建日期" Width="Auto" ElementStyle="{StaticResource CenterAlignmentStyle}"/>
+                        <DataGridTextColumn Binding="{Binding CableName}" Header="产品编号" Width="150*" ElementStyle="{StaticResource CenterAlignmentStyle}"/>
+                        <DataGridTextColumn Binding="{Binding Remark}" Header="产品名" Width="150*" ElementStyle="{StaticResource CenterAlignmentStyle}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </GroupBox>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Button IsEnabled="{Binding IsBarEditEnable}"
+                    Grid.Column="0" 
+                    Margin="20" 
+                    FontSize="16" 
+                    Click="btnBarEdit_Click" 
+                    Background="#FFFFC04E" >
+                <StackPanel Orientation="Horizontal">
+                    <Image Stretch="Fill" Height="20" Width="32" Source="/CpldUI;component/Icon/bartender.png" />
+                    <TextBlock Height="22"><Run Text=" 条码配置" /></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Content="新增" 
+                    IsEnabled="{Binding IsCableEditEnable}"
+                    FontSize="16" 
+                    Background="#FFFFC04E" 
+                    Margin="5,20" 
+                    Grid.Column="1"
+                    Click="btnAdd_Click"/>
+            <Button Content="删除" 
+                    IsEnabled="{Binding IsCableEditEnable}"
+                    FontSize="16" 
+                    Margin="5,20" 
+                    Background="#FFFFC04E" 
+                    Grid.Column="2"  
+                    Click="btnDel_Click"/>
+            <Button Content="复制" 
+                    IsEnabled="{Binding IsCableEditEnable}"
+                    Margin="5,20" 
+                    Grid.Column="3"
+                    FontSize="16" 
+                    Background="#FFFFC04E" 
+                    Click="btnCopy_Click"/>
+            <Button Content="修改" 
+                    IsEnabled="{Binding IsCableEditEnable}"
+                    Margin="5,20" 
+                    Grid.Column="4"
+                    FontSize="16" 
+                    Background="#FFFFC04E" 
+                    Click="btnEdit_Click"/>
+            <Button Content="绘图" 
+                    IsEnabled="{Binding IsCableEditEnable}"
+                    Margin="5,20" 
+                    Grid.Column="5"
+                    FontSize="16" 
+                    Background="#FFFFC04E" 
+                    Click="btnDraw_Click"/>
+            <Button FontSize="16" 
+                    Margin="5,20" 
+                    Background="LightGreen" 
+                    Grid.Column="7" 
+                    Content="确认"   
+                    Click="btnOk_Click"/>
+            <Button FontSize="16" 
+                    Margin="5,20" 
+                    Background="LightPink" 
+                    Content="关闭" 
+                    Grid.Column="8"  
+                    IsCancel="True"/>
+        </Grid>
+    </Grid>
+</Window>

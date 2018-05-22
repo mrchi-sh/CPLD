@@ -1,0 +1,22 @@
+
+ 
+记录时间：2018-05-02 20:47:29,696 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.UriFormatException: 无效的 URI: Dos 路径必须是根路径，例如，“c:\”。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 CpldUI.GraphCheckUI.GraphicalCableCheck.InitBgConfig() 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldUI\CpldMonitor\GraphCheckUI\GraphicalCableCheck.xaml.cs:行号 114
+
+ 
+记录时间：2018-05-02 20:49:37,387 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.UriFormatException: 无效的 URI: Dos 路径必须是根路径，例如，“c:\”。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 CpldUI.GraphCheckUI.GraphicalCableCheck.InitBgConfig() 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldUI\CpldMonitor\GraphCheckUI\GraphicalCableCheck.xaml.cs:行号 114

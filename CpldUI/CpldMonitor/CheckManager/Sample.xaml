@@ -1,0 +1,111 @@
+﻿<Window x:Class="CpldUI.CheckManager.Sample"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:CpldUI.CheckManager"
+        Title="取样" Height="500" Width="750" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/CpldUI;component/logo.ico">
+    <Window.Resources>
+        <Style x:Key="CenterAlignmentStyle" TargetType="TextBlock">
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style> 
+        <local:SampleViewModel x:Key="ViewModel"/>
+    </Window.Resources>
+
+    <Grid DataContext="{Binding Source={StaticResource ViewModel}}" Name="Grid">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="White" Offset="0.419"/>
+                <GradientStop Color="#ADD7EBFD" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="7*"/>
+                </Grid.ColumnDefinitions>
+                 <Label Grid.Column="0" FontSize="20"  Margin="10,0"
+                        Content="操作员:" 
+                        VerticalAlignment="Center"/>
+                <Label Grid.Column="1" FontSize="20" Margin="2"
+                       Content="{Binding UserInfo.UserName}" 
+                       Background="#FF94E8FB"/>
+            </Grid>
+            <Grid Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="7*"/>
+                </Grid.ColumnDefinitions>
+                <Label FontSize="20" Content="产品名:" VerticalAlignment="Center" Margin="10,0"/>
+                <TextBox Grid.Column="1" Margin="2"
+                         FontSize="20" TextWrapping="Wrap" Text="{Binding CableInfo.CableName,UpdateSourceTrigger=PropertyChanged}"/>
+               </Grid>
+            <Grid Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="7*"/>
+                </Grid.ColumnDefinitions>
+                <Label FontSize="20" Content="备注:" VerticalAlignment="Center" Margin="10,0"/>
+                <TextBox Grid.Column="1" FontSize="20" 
+                         TextWrapping="Wrap" Text="{Binding CableInfo.Remark,UpdateSourceTrigger=PropertyChanged}" Margin="2"/>
+            </Grid>
+            <Grid Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Label FontSize="20" Content="点数:" VerticalAlignment="Center" Margin="10,0"/>
+                <Label Grid.Column="1" Content="{Binding PointCount}" Margin="2"
+                       Background="#FFF9F900" FontSize="20" VerticalAlignment="Center"/>
+
+                <Label Grid.Column="2" FontSize="20" Content="回路数:" VerticalAlignment="Center" Margin="10,0"/>
+                <Label Grid.Column="3" Content="{Binding CircuitCount}" Margin="2"
+                       Background="#FFFFABFF" FontSize="20"  VerticalAlignment="Center" />
+            </Grid>
+        </Grid>
+        <DataGrid  Grid.Row="1" ScrollViewer.CanContentScroll="True"  Background="White" FontSize="16"
+                   AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" SelectionMode="Single"
+                   Grid.ColumnSpan="1" Margin="10,0" ItemsSource="{Binding CheckResults}">
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Id}" Header="编号" Width="Auto" ElementStyle="{StaticResource CenterAlignmentStyle}"/>
+                <DataGridTextColumn Binding="{Binding CheckResult}"  Header="配线内容" Width="1*" ElementStyle="{StaticResource CenterAlignmentStyle}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+     
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="1" Focusable="False" FontSize="16" IsDefault="True"
+                    Content="开始" Margin="5"
+                    Background="LightGreen" VerticalAlignment="Center" Click="BtnStart_Click"/>
+            <Button Grid.Column="2" Focusable="False" FontSize="16" 
+                    Content="保存" Margin="5"
+                    Background="#FFA8DBFF" VerticalAlignment="Center" Click="BtnSave_Click"/>
+            <Button Grid.Column="3" FontSize="16" 
+                    Content="关闭" Margin="5"
+                    Background="LightPink" VerticalAlignment="Center" IsCancel="True" />
+        </Grid>
+        
+    </Grid>
+</Window>

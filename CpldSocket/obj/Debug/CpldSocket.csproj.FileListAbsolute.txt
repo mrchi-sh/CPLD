@@ -1,0 +1,4 @@
+D:\Zhonghua\CPLD\CpldSocket\bin\Debug\CpldSocket.dll
+D:\Zhonghua\CPLD\CpldSocket\bin\Debug\CpldSocket.pdb
+D:\Zhonghua\CPLD\CpldSocket\obj\Debug\CpldSocket.dll
+D:\Zhonghua\CPLD\CpldSocket\obj\Debug\CpldSocket.pdb

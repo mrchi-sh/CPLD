@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{07BBA912-E629-48BF-A0D5-17412D1D393A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CpldControl</RootNamespace>
+    <AssemblyName>CpldControl</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bartend\BartendControl.cs" />
+    <Compile Include="CheckResultOutput\CheckResultOutput.cs" />
+    <Compile Include="Check\CommonControl.cs" />
+    <Compile Include="Check\SampleCheck.cs" />
+    <Compile Include="CommandData.cs" />
+    <Compile Include="DataParser\CommonParser.cs" />
+    <Compile Include="DataParser\PointCircuitParser.cs" />
+    <Compile Include="DataParser\SelfCheckParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CpldBase\CpldBase.csproj">
+      <Project>{2c651e53-444f-4e52-a2ce-2ed09cc1619d}</Project>
+      <Name>CpldBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CpldDB\CpldDB.csproj">
+      <Project>{f8a04add-0371-4cbf-aa9f-5f4af68b8f59}</Project>
+      <Name>CpldDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CpldLog\CpldLog.csproj">
+      <Project>{51a2cfe4-15dc-4fb0-ab1c-78b1f5b83982}</Project>
+      <Name>CpldLog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CpldSocket\CpldSocketLib.csproj">
+      <Project>{d19ef066-c3ec-433f-82ee-66acec2374c6}</Project>
+      <Name>CpldSocketLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

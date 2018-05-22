@@ -1,0 +1,574 @@
+
+ 
+记录时间：2018-05-03 09:18:58,576 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 CpldSocketLib.CpldSocket.receive(List`1& recvList) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 216
+
+ 
+记录时间：2018-05-03 09:19:08,727 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 CpldSocketLib.CpldSocket.receive(List`1& recvList) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 216
+
+ 
+记录时间：2018-05-03 09:19:14,483 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 CpldSocketLib.CpldSocket.receive(List`1& recvList) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 216
+
+ 
+记录时间：2018-05-03 09:19:19,542 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer)
+   在 CpldSocketLib.CpldSocket.send(Byte[] data) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 259
+
+ 
+记录时间：2018-05-03 09:19:19,561 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：receive timeout
+ 
+
+ 
+记录时间：2018-05-03 09:19:20,569 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 09:49:04,535 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.UriFormatException: 无效的 URI: Dos 路径必须是根路径，例如，“c:\”。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 CpldUI.GraphCheckUI.GraphicalCableCheck.InitBgConfig() 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldUI\CpldMonitor\GraphCheckUI\GraphicalCableCheck.xaml.cs:行号 114
+
+ 
+记录时间：2018-05-03 09:49:07,611 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：图片选择错误或丢失System.UriFormatException: 无效的 URI: Dos 路径必须是根路径，例如，“c:\”。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 CpldUI.GraphCheckUI.GraphicalConfigCable.ChangeImg() 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldUI\CpldMonitor\GraphCheckUI\GraphicalConfigCable.xaml.cs:行号 200
+ 
+
+ 
+记录时间：2018-05-03 11:02:00,129 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 11:02:01,196 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 11:02:07,192 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 11:02:08,189 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 11:02:14,185 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 11:02:15,194 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 11:02:46,191 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 11:45:52,128 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 11:45:53,162 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 11:51:06,463 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 11:51:07,488 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 12:20:19,207 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 12:20:20,252 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 12:20:32,412 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 12:20:32,412 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Send fail
+ 
+
+ 
+记录时间：2018-05-03 12:28:36,526 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 12:28:37,554 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 12:28:45,298 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 12:28:45,298 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Send fail
+ 
+
+ 
+记录时间：2018-05-03 12:28:50,081 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 12:28:50,081 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Send fail
+ 
+
+ 
+记录时间：2018-05-03 12:28:52,952 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 12:28:52,952 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Send fail
+ 
+
+ 
+记录时间：2018-05-03 12:29:05,360 
+线程ID:[13] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.100.200:2016
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 CpldSocketLib.CpldSocket.connectCallBack(IAsyncResult ar) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 99
+ 
+
+ 
+记录时间：2018-05-03 12:29:10,093 
+线程ID:[13] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.100.200:2016
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 CpldSocketLib.CpldSocket.connectCallBack(IAsyncResult ar) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 99
+ 
+
+ 
+记录时间：2018-05-03 12:29:17,615 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 CpldSocketLib.CpldSocket.receive(List`1& recvList) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 222
+
+ 
+记录时间：2018-05-03 12:29:17,672 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 你的主机中的软件中止了一个已建立的连接。
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer)
+   在 CpldSocketLib.CpldSocket.send(Byte[] data) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 259
+
+ 
+记录时间：2018-05-03 12:29:17,685 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：receive timeout
+ 
+
+ 
+记录时间：2018-05-03 15:16:35,558 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 一个封锁操作被对 WSACancelBlockingCall 的调用中断。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 CpldSocketLib.CpldSocket.receive(List`1& recvList) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 216
+
+ 
+记录时间：2018-05-03 15:16:35,558 
+线程ID:[14] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 CpldSocketLib.CpldSocket.receive(List`1& recvList) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 216
+
+ 
+记录时间：2018-05-03 15:16:35,621 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Receive Fail
+ 
+
+ 
+记录时间：2018-05-03 15:16:35,623 
+线程ID:[14] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Receive Fail
+ 
+
+ 
+记录时间：2018-05-03 15:41:40,830 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 CpldSocketLib.CpldSocket.receive(List`1& recvList) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 216
+
+ 
+记录时间：2018-05-03 15:41:50,923 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 CpldSocketLib.CpldSocket.receive(List`1& recvList) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 216
+
+ 
+记录时间：2018-05-03 15:41:55,976 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer)
+   在 CpldSocketLib.CpldSocket.send(Byte[] data) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 259
+
+ 
+记录时间：2018-05-03 15:41:55,988 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：receive timeout
+ 
+
+ 
+记录时间：2018-05-03 15:41:56,990 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 15:42:02,991 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 15:42:03,991 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 15:42:09,993 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 15:42:10,994 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-03 15:42:17,009 
+线程ID:[13] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.100.200:2016
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 CpldSocketLib.CpldSocket.connectCallBack(IAsyncResult ar) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 99
+ 
+
+ 
+记录时间：2018-05-03 15:42:21,072 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 CpldSocketLib.CpldSocket.receive(List`1& recvList) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 222
+
+ 
+记录时间：2018-05-03 15:42:23,006 
+线程ID:[13] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.100.200:2016
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 CpldSocketLib.CpldSocket.connectCallBack(IAsyncResult ar) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 99
+ 
+
+ 
+记录时间：2018-05-03 15:42:26,127 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 CpldSocketLib.CpldSocket.receive(List`1& recvList) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 222
+
+ 
+记录时间：2018-05-03 15:42:31,178 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 你的主机中的软件中止了一个已建立的连接。
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer)
+   在 CpldSocketLib.CpldSocket.send(Byte[] data) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 259
+
+ 
+记录时间：2018-05-03 15:42:31,191 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：receive timeout
+ 
+
+ 
+记录时间：2018-05-03 15:53:52,005 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 一个封锁操作被对 WSACancelBlockingCall 的调用中断。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 CpldSocketLib.CpldSocket.receive(List`1& recvList) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 216
+
+ 
+记录时间：2018-05-03 15:53:52,006 
+线程ID:[21] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 CpldSocketLib.CpldSocket.receive(List`1& recvList) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 216
+
+ 
+记录时间：2018-05-03 15:53:52,072 
+线程ID:[21] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Receive Fail
+ 
+
+ 
+记录时间：2018-05-03 15:53:52,071 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Receive Fail
+ 
+
+ 
+记录时间：2018-05-03 16:03:35,805 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.UriFormatException: 无效的 URI: Dos 路径必须是根路径，例如，“c:\”。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 CpldUI.Check.GraphCheck.GraphicalCableCheck.InitBgConfig() 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldUI\CpldMonitor\Check\GraphCheck\GraphicalCableCheck.xaml.cs:行号 116
+
+ 
+记录时间：2018-05-03 18:21:50,248 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.UriFormatException: 无效的 URI: Dos 路径必须是根路径，例如，“c:\”。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 CpldUI.Check.GraphCheck.GraphicalCableCheck.InitBgConfig() 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldUI\CpldMonitor\CheckManager\GraphCheck\GraphicalCableCheck.xaml.cs:行号 116

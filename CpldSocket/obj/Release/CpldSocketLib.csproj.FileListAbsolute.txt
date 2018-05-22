@@ -1,0 +1,1 @@
+D:\Zhonghua\cpld_all\CPLD\CpldSocket\obj\Release\CpldSocketLib.csprojResolveAssemblyReference.cache

@@ -1,0 +1,192 @@
+
+ 
+记录时间：2018-05-21 13:11:12,735 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-21 13:11:13,765 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-21 13:11:19,766 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-21 13:11:20,767 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-21 13:11:26,769 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-21 13:11:27,769 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-21 13:11:34,811 
+线程ID:[20] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-21 13:11:34,811 
+线程ID:[20] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Send fail
+ 
+
+ 
+记录时间：2018-05-21 13:11:43,766 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-21 13:11:44,766 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-21 13:17:54,772 
+线程ID:[10] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-21 13:17:55,797 
+线程ID:[10] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-21 14:06:13,483 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-21 14:06:14,522 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-21 14:07:17,086 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-21 14:07:18,109 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-21 14:23:48,489 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-21 14:23:49,498 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-21 14:23:58,716 
+线程ID:[20] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-21 14:23:58,716 
+线程ID:[20] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Send fail
+ 
+
+ 
+记录时间：2018-05-21 14:55:13,193 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-21 14:55:14,236 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-21 17:14:01,299 
+线程ID:[1] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-21 17:14:02,327 
+线程ID:[1] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 

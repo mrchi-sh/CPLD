@@ -1,0 +1,168 @@
+
+ 
+记录时间：2018-05-22 09:30:59,232 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-22 09:31:00,265 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-22 09:31:40,006 
+线程ID:[10] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-22 09:31:41,030 
+线程ID:[10] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-22 09:31:53,060 
+线程ID:[21] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-22 09:31:53,061 
+线程ID:[21] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Send fail
+ 
+
+ 
+记录时间：2018-05-22 09:33:42,031 
+线程ID:[10] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-22 09:33:43,031 
+线程ID:[10] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-22 09:35:34,833 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-22 09:35:35,865 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-22 09:35:41,861 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-22 09:35:42,862 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-22 09:35:48,858 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-22 09:35:49,859 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-22 09:35:55,858 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-22 09:35:56,861 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-22 09:36:08,927 
+线程ID:[13] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.100.200:2016
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 CpldSocket.CpldSocket.ConnectCallBack(IAsyncResult ar) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 84
+ 
+
+ 
+记录时间：2018-05-22 09:36:09,879 
+线程ID:[13] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.100.200:2016
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 CpldSocket.CpldSocket.ConnectCallBack(IAsyncResult ar) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 84
+ 
+
+ 
+记录时间：2018-05-22 09:36:15,877 
+线程ID:[13] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.100.200:2016
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 CpldSocket.CpldSocket.ConnectCallBack(IAsyncResult ar) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 84
+ 
+
+ 
+记录时间：2018-05-22 09:36:16,875 
+线程ID:[12] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.100.200:2016
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 CpldSocket.CpldSocket.ConnectCallBack(IAsyncResult ar) 位置 c:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\CpldSocket.cs:行号 84
+ 

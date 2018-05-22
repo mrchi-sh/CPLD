@@ -1,0 +1,82 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:CpldUI.GraphCheckUI" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" x:Class="CpldUI.GraphCheckUI.GraphEdit"
+        Title="GraphEdit" Height="720" Width="1024" Loaded="Window_Loaded">
+    <Window.Resources>
+        <DataTemplate x:Key="test">
+            <Grid>
+                <local:PinImage Uid="{Binding PinControl}" ToolTip="{Binding PinControl}" MouseLeftButtonDown="bt2_PreviewMouseLeftButtonDown" MouseRightButtonUp="bt2_MouseRightButtonUp"/>
+            </Grid>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="White" Offset="0.419"/>
+                <GradientStop Color="#ADD7EBFD" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <GroupBox Header="导通点定位图" FontSize="14">
+                <Canvas AllowDrop="True" Grid.Row="0" x:Name="canvasDraw" SizeChanged="canvasDraw_SizeChanged" Margin="0,10,0,0" Drop="canvasDraw_Drop">
+                    <Image x:Name="imgPoint" Source="c:/table.jpg" Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Top" Width="544" Height="552"  SizeChanged="imgPoint_SizeChanged"/>
+                    <local:PinImage Canvas.Left="193" Canvas.Top="251" ToolTip="A111" PreviewMouseLeftButtonDown="pin_PreviewMouseLeftButtonDown" PreviewMouseLeftButtonUp="pin_PreviewMouseLeftButtonUp" RenderTransformOrigin="-0.033,1.667"/>
+                    <Button x:Name="bt1" Content="Button" Width="75"  Click="Button_Click" Canvas.Left="873"/>
+                    <Button x:Name="bt2" Content="Button2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" PreviewMouseLeftButtonDown="bt2_PreviewMouseLeftButtonDown" Canvas.Left="288" Canvas.Top="269"/>
+                    <local:PinImage Canvas.Left="82" Canvas.Top="251"/>
+                </Canvas>
+            </GroupBox>
+        </Grid>
+
+        <Grid Grid.Column="1" Margin="20,0,0,0">
+            <GroupBox Header="导通点列表" FontSize="14">
+                <Grid x:Name="gridPointList" Margin="0,5,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="6*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label FontSize="14" Content="排序方式:" VerticalContentAlignment="Bottom"/>
+                        <ComboBox FontSize="14" Grid.Column="1" Height="25" Margin="10,2,0,2">
+                            <ComboBoxItem Content="顺序排序" IsSelected="True"/>
+                            <ComboBoxItem Content="导通排序"/>
+                        </ComboBox>
+                    </Grid>
+                    <Grid Grid.Row="1" Margin="0,10,0,0">
+                        <ListView Name="lvPoint">
+                            <ListView.View>
+                                <GridView >
+                                    <GridViewColumn Header="导通点" Width="80" DisplayMemberBinding="{Binding PointNo}"/>
+                                    <GridViewColumn Header="备注名" Width="80" DisplayMemberBinding="{Binding AliasName}"/>
+                                    <GridViewColumn Header="定位针" Width="52" CellTemplate="{StaticResource test}"/>
+
+
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </Grid>
+                </Grid>
+            </GroupBox>
+        </Grid>
+
+        <Grid Grid.Column="2" Margin="20,0,0,0">
+            <GroupBox Header="操作" FontSize="14">
+                <Grid>
+                    <Button x:Name="btnClearPoints" Focusable="False" FontSize="16" Background="#FFF19539" Content="清除所有定位点" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Width="128" Margin="16,83,0,0"  />
+                    <Button x:Name="btnImportBackGround" Focusable="False" FontSize="16"  Background="#FFA8DBFF" Content="导入背景图" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Width="128" Margin="16,25,0,0" Click="btnImportBackGround_Click" />
+                    <Button Focusable="False" FontSize="16" Background="LightGreen" Content="保存定位图" Height="40" HorizontalAlignment="Left"  x:Name="btnSave" VerticalAlignment="Top" Width="127" Margin="16,206,0,0" Click="btnSave_Click"/>
+                </Grid>
+            </GroupBox>
+        </Grid>
+    </Grid>
+</Window>
