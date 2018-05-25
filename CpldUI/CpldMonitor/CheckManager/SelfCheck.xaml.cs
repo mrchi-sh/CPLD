@@ -8,6 +8,7 @@ using System.Windows.Data;
 using CpldBase;
 using CpldControl.Check;
 using CpldDB;
+using CpldUI.Check;
 
 namespace CpldUI.CheckManager
 {
@@ -69,9 +70,14 @@ namespace CpldUI.CheckManager
            
             BtnOk.IsEnabled = true;
             wb.Dispatcher.Invoke((Action)(() => wb.Close()));
-            InfoBox.PlaySound(!isSelfCheckOk);
+            InfoBox.PlaySound(isSelfCheckOk);
             new ResultPopUp(isSelfCheckOk, true, true).ShowDialog();
             
+        }
+
+        private void btnPointSearch_Click(object sender, RoutedEventArgs e)
+        {
+            new PointSearch().ShowDialog();
         }
     }
 }

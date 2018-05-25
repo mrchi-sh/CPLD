@@ -12,7 +12,7 @@ namespace CpldDB
 
         public static void InitDbConn()
         {
-            var mySqlStr = "Database=tds_data;Data Source=" + Params.DbHost + ";User Id=root;Password=asdfghjkl;"+
+            var mySqlStr = "Database=" + Params.DbName + ";Data Source=" + Params.DbHost + ";User Id="+Params.DbUser +";Password="+ Params.DbPsasword+";" +
                               "pooling=false;CharSet=utf8;port=" + Params.DbPort + "; Connection Timeout = 5000";
             _conn = new MySqlConnection(mySqlStr);
         }

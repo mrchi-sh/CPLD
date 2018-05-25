@@ -435,6 +435,8 @@ namespace CpldUI.CheckManager.GraphCheck
             }
             if (!string.IsNullOrEmpty(_circuitLoop))
                 _circuitLoop = _circuitLoop.Remove(_circuitLoop.Length - 1, 1);
+            BtnStart.Content = "结   束";
+            BtnStart.Background = Brushes.Pink;
             if (Cable.Settings.AutoStart)
             {
                 if (!_manualStartOnce)
@@ -454,6 +456,8 @@ namespace CpldUI.CheckManager.GraphCheck
 
                     Dispatcher.Invoke(new Action(delegate
                     {
+                        BtnStart.Content = "开    始";
+                        BtnStart.Background = Brushes.LightGreen;
                         LblStartMode.Content = "当前工作模式：OK等待，第一次请手动点击开始";
                     }));
                 }
@@ -652,7 +656,8 @@ namespace CpldUI.CheckManager.GraphCheck
                     Dispatcher.Invoke(new Action(delegate
                     {
                         LblStartMode.Content = "当前工作模式：OK等待，第一次请手动点击开始";
-                        BtnStart.Content = "开  始";
+                        BtnStart.Content = "开    始";
+                        BtnStart.Background = Brushes.LightGreen;
                     }));
                     return;
                 }
@@ -667,7 +672,8 @@ namespace CpldUI.CheckManager.GraphCheck
                         Dispatcher.Invoke(new Action(delegate
                         {
                             LblStartMode.Content = "当前工作模式：OK等待，第一次请手动点击开始";
-                            BtnStart.Content = "开  始";
+                            BtnStart.Content = "开    始";
+                            BtnStart.Background = Brushes.LightGreen;
                         }));
                         return;
                     }
@@ -686,7 +692,7 @@ namespace CpldUI.CheckManager.GraphCheck
                         }));
                         _needStopFlag = false;
                     }
-                    Thread.Sleep(200);
+                    //Thread.Sleep(200);
                 }
 
                 if (shortCircuitList.Count == 0 && openCircuitList.Count == 0)
@@ -710,11 +716,12 @@ namespace CpldUI.CheckManager.GraphCheck
                             Dispatcher.Invoke(new Action(delegate
                             {
                                 LblStartMode.Content = "当前工作模式：OK等待，第一次请手动点击开始";
-                                BtnStart.Content = "开  始";
+                                BtnStart.Content = "开    始";
+                                BtnStart.Background = Brushes.LightGreen;
                             }));
                             return;
                         }
-                        Thread.Sleep(200);
+                        //Thread.Sleep(200);
                     }
 
                     _needStopFlag = true;
@@ -751,7 +758,7 @@ namespace CpldUI.CheckManager.GraphCheck
                         }
                     }));
                 }
-                Thread.Sleep(200);
+                //Thread.Sleep(200);
             }
         }
 

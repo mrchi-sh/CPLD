@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\MrChi\Desktop\CHI\CPLD\CpldUI\CpldMonitor\obj\Debug\
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldUI\CpldMonitor\obj\Debug\
 CpldUI
 none
 false
 DEBUG;TRACE
-C:\Users\MrChi\Desktop\CHI\CPLD\CpldUI\CpldMonitor\App.xaml
-19-1439572237
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldUI\CpldMonitor\App.xaml
+20-805614589
 3-16260925
-261796439425
-19-2060573415
-CheckManager\Bar\BarMgr.xaml;CheckManager\Sample.xaml;CheckManager\SelfCheck.xaml;CheckManager\GraphCheck\GraphicalConfigCable.xaml;CheckManager\GraphCheck\GraphicalMangementCable.xaml;CpldMain.xaml;SettingManager\CpldSetting.xaml;CheckManager\GraphCheck\GraphicalConfigCableInfo.xaml;CheckManager\GraphCheck\GraphicalConfigCircuit.xaml;CheckManager\GraphCheck\GraphicalConfigDot.xaml;CheckManager\GraphCheck\GraphicalCableCheck.xaml;RecordManager\CheckResultDetail.xaml;RecordManager\CheckResultManager.xaml;SettingManager\IPTextBoxCtrl.xaml;CheckManager\Base\ResultPopUp.xaml;UserManager\AuthenEdit.xaml;UserManager\UserAdd.xaml;UserManager\UserEdit.xaml;UserManager\UserMgr.xaml;
+2757735848
+19220540403
+CheckManager\Bar\BarMgr.xaml;CheckManager\PointSearch.xaml;CheckManager\Sample.xaml;CheckManager\SelfCheck.xaml;CheckManager\GraphCheck\GraphicalConfigCable.xaml;CheckManager\GraphCheck\GraphicalMangementCable.xaml;CpldMain.xaml;SettingManager\CpldSetting.xaml;CheckManager\GraphCheck\GraphicalConfigCableInfo.xaml;CheckManager\GraphCheck\GraphicalConfigCircuit.xaml;CheckManager\GraphCheck\GraphicalConfigDot.xaml;CheckManager\GraphCheck\GraphicalCableCheck.xaml;RecordManager\CheckResultDetail.xaml;RecordManager\CheckResultManager.xaml;SettingManager\IPTextBoxCtrl.xaml;CheckManager\Base\ResultPopUp.xaml;UserManager\AuthenEdit.xaml;UserManager\UserAdd.xaml;UserManager\UserEdit.xaml;UserManager\UserMgr.xaml;
 
 False
 

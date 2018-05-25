@@ -52,3 +52,14 @@ C:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\bin\Debug\log4net.xml
 C:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\obj\Debug\CpldSocket.dll
 C:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\obj\Debug\CpldSocket.pdb
 C:\Users\MrChi\Desktop\CHI\CPLD\CpldSocket\bin\Debug\CpldLog.pdb
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\bin\Debug\CpldSocket.dll
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\bin\Debug\CpldSocket.pdb
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\bin\Debug\CpldBase.dll
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\bin\Debug\CpldLog.dll
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\bin\Debug\log4net.dll
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\bin\Debug\CpldBase.pdb
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\bin\Debug\CpldLog.pdb
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\bin\Debug\log4net.xml
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\obj\Debug\CpldSocketLib.csprojResolveAssemblyReference.cache
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\obj\Debug\CpldSocket.dll
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\obj\Debug\CpldSocket.pdb

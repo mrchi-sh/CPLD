@@ -10,21 +10,9 @@ namespace CpldDB
 {
     public class CableInfo
     {
-        private string _cableName;
-        private string _remark;
         public int CableId { get; set; }
         public string CableName { get; set; }
-        //{
-        //    get { return _cableName; }
-        //    set { SetProperty(ref _cableName,value); }
-        //}
-
         public string Remark { get; set; }
-
-        //{
-        //    get { return _remark; }
-        //    set { SetProperty(ref _remark,value);}
-        //}
         public string ModifyDate { get; set; }
         public string CreateUser { get; set; }
         public string BgImgPath { get; set; }

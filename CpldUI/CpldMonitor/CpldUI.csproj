@@ -108,6 +108,9 @@
       <DependentUpon>BarMgr.xaml</DependentUpon>
     </Compile>
     <Compile Include="CheckManager\Base\CommonCheck.cs" />
+    <Compile Include="CheckManager\PointSearch.xaml.cs">
+      <DependentUpon>PointSearch.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CheckManager\Sample.xaml.cs">
       <DependentUpon>Sample.xaml</DependentUpon>
     </Compile>
@@ -223,6 +226,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CheckManager\PointSearch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="CheckManager\Sample.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -318,7 +325,9 @@
     <Resource Include="Icon\setting.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Icon\check.png" />
+    <Resource Include="Icon\check.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icon\checkResult.png" />
@@ -390,7 +399,6 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

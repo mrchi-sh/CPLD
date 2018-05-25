@@ -38,3 +38,12 @@ C:\Users\MrChi\Desktop\CHI\CPLD\CpldBase\obj\Debug\WaitBox.baml
 C:\Users\MrChi\Desktop\CHI\CPLD\CpldBase\obj\Debug\WaitBox.g.cs
 C:\Users\MrChi\Desktop\CHI\CPLD\CpldBase\obj\Debug\CpldBase_MarkupCompile.cache
 C:\Users\MrChi\Desktop\CHI\CPLD\CpldBase\obj\Debug\CpldBase.g.resources
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldBase\bin\Debug\CpldBase.dll
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldBase\bin\Debug\CpldBase.pdb
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldBase\obj\Debug\CpldBase.csprojResolveAssemblyReference.cache
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldBase\obj\Debug\WaitBox.baml
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldBase\obj\Debug\WaitBox.g.cs
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldBase\obj\Debug\CpldBase_MarkupCompile.cache
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldBase\obj\Debug\CpldBase.g.resources
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldBase\obj\Debug\CpldBase.dll
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldBase\obj\Debug\CpldBase.pdb

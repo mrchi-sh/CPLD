@@ -2,19 +2,49 @@
 using System.Globalization;
 using System.Reflection;
 using System.Windows;
+using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Media;
 using CpldDB;
 using CpldLog;
 using ComboBox = System.Windows.Controls.ComboBox;
-using RadioButton = System.Windows.Controls.RadioButton;
 
 
 namespace CpldUI.CheckManager.GraphCheck
 {
-    public class GraphicalConfigCircuitViewModel
-    {
 
+    public class TypeToBoolConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value == null) return false;
+            var s = (int)value;
+            return parameter != null && s == int.Parse(parameter.ToString());
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value == null) return 1;
+            var isChecked = (bool)value;
+            if (!isChecked)
+            {
+                return null;
+            }
+            return parameter == null ? 1 : int.Parse(parameter.ToString());
+        }
+    }
+    public class ColorToPropertyInfoConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            var color = (Color)value;
+            return new SolidColorBrush(color);
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return null;
+        }
     }
 
     /// <summary>
@@ -33,47 +63,8 @@ namespace CpldUI.CheckManager.GraphCheck
             CmbDotFgColors.ItemsSource = typeof(Colors).GetProperties();
             CmbDotBgColors.ItemsSource = typeof(Colors).GetProperties();
 
-            CmbLineColors.ItemsSource = typeof(Colors).GetProperties();
-            CmbDotFgColors.ItemsSource = typeof(Colors).GetProperties();
-            CmbDotBgColors.ItemsSource = typeof(Colors).GetProperties();
-
             CurCircuit = circuit;
-
-            TbCircuitName.Text = circuit.Name;
-            TbRemarks.Text = circuit.Remark;
-
-            switch (circuit.DotStyle.Type)
-            {
-                case 1:
-                    DotType1.IsChecked = true;
-                    break;
-                case 2:
-                    DotType2.IsChecked = true;
-                    break;
-                case 3:
-                    DotType3.IsChecked = true;
-                    break;
-                default:
-                    DotType1.IsChecked = true;
-                    break;
-            }
-
-
-            switch (circuit.LineStyle.Type)
-            {
-                case 1:
-                    LineType1.IsChecked = true;
-                    break;
-                case 2:
-                    LineType2.IsChecked = true;
-                    break;
-                case 3:
-                    LineType3.IsChecked = true;
-                    break;
-                default:
-                    LineType1.IsChecked = true;
-                    break;
-            }
+            Grid.DataContext = CurCircuit;
 
             foreach (var item in typeof(Colors).GetProperties())
             {
@@ -100,36 +91,7 @@ namespace CpldUI.CheckManager.GraphCheck
             }
 
             CmbLineWidth.SelectedIndex = Convert.ToInt32(circuit.LineStyle.Size) - 1;
-            TbDotSize.Text = circuit.DotStyle.Size.ToString(CultureInfo.InvariantCulture);
-        }
-
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-            var rb = sender as RadioButton;
-            if (rb == null)
-                return;
-            switch (rb.Name)
-            {
-                case "DotType1":
-                    CurCircuit.DotStyle.Type = 1;
-                    break;
-                case "DotType2":
-                    CurCircuit.DotStyle.Type = 2;
-                    break;
-                case "DotType3":
-                    CurCircuit.DotStyle.Type = 3;
-                    break;
-                case "LineType1":
-                    CurCircuit.LineStyle.Type = 1;
-                    break;
-                case "LineType2":
-                    CurCircuit.LineStyle.Type = 2;
-                    break;
-                case "LineType3":
-                    CurCircuit.LineStyle.Type = 3;
-                    break;
-                default: break;
-            }
+            
         }
 
         private void cmbColors_ContextMenuClosing(object sender, EventArgs e)
@@ -170,22 +132,6 @@ namespace CpldUI.CheckManager.GraphCheck
         {
             DialogResult = true;
         }
-
-        private void tbCircuitName_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
-        {
-            CurCircuit.Name = TbCircuitName.Text;
-        }
-
-        private void tbRemarks_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
-        {
-            CurCircuit.Remark = TbRemarks.Text;
-        }
-
-        private void TbDotSize_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
-        {
-            CurCircuit.DotStyle.Size = Convert.ToDouble(TbDotSize.Text);
-        }
-
 
     }
     

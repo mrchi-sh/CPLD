@@ -386,6 +386,7 @@ namespace CpldUI.CheckManager.GraphCheck
         private void ZoomCanvas_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             _curCircuit.GetAllLines(_zoomScale);
+
             var dotInfo = new DotInfo
             {
                 ParentCableId = Cable.CableId,
@@ -393,7 +394,7 @@ namespace CpldUI.CheckManager.GraphCheck
                 ParentCircuitId = _curCircuit.Info.CircuitId,
 
                 DotStyle = _curCircuit.Info.DotStyle,
-                Position = e.GetPosition(ZoomCanvas)
+                Position = new Point(e.GetPosition(ZoomCanvas).X / _zoomScale, e.GetPosition(ZoomCanvas).Y / _zoomScale)
             };
             if (_dots.Count > 0)
             {
@@ -404,7 +405,7 @@ namespace CpldUI.CheckManager.GraphCheck
                 dotInfo.DotId = 1;
             }
             dotInfo.Name = "点" + dotInfo.DotId;
-            GraphAddDot(dotInfo, _curCircuit);
+            _curSelectDot = GraphAddDot(dotInfo, _curCircuit);
         }
 
         private void ZoomCanvas_MouseRightUp(object sender, MouseButtonEventArgs e)
@@ -434,7 +435,6 @@ namespace CpldUI.CheckManager.GraphCheck
             {
                 pos = DrawAuxiliaryLine(curDot, pos);
                 curDot.SetPosition(pos.X, pos.Y, _zoomScale);
-                curDot.InCircuit.GetAllLines(_zoomScale);
             }
         }
 
@@ -546,7 +546,7 @@ namespace CpldUI.CheckManager.GraphCheck
                 GraphAddCircuit(newCircuit.CurCircuit);
             }
         }
-        private void GraphAddCircuit(CircuitInfo circuitInfo)
+        private Circuit GraphAddCircuit(CircuitInfo circuitInfo)
         {
             var circuit = new Circuit(circuitInfo);
             _circuits.Add(circuit);
@@ -554,6 +554,7 @@ namespace CpldUI.CheckManager.GraphCheck
             if (circuit.Info.CircuitId == 0)
                 _emptyCircuit = circuit;
             ZoomCanvas.Children.Add(circuit.CircuitCanvas);
+            return circuit;
         }
         #endregion
 
@@ -811,63 +812,50 @@ namespace CpldUI.CheckManager.GraphCheck
             _auxiliaryLineCanvas.Children.Clear();
         }
 
-        private Point DrawAuxiliaryLine(Dot curDot, Point pos)
+        private Point DrawAuxiliaryLine(Dot curDot, Point mousePos)
         {
             Dot dotX1 = null;
             Dot dotY1 = null;
             Dot dotX2 = null;
             Dot dotY2 = null;
+
             ClearAuxiliaryLine();
             _auxiliaryLineCanvas.Opacity = 1;
-            var dotsXList = _dots.Where(dot =>(Math.Abs(pos.X - dot.Info.Position.X * _zoomScale) <= 5) && (!dot.Equals(curDot))).ToList();
-            var dotsYList = _dots.Where(dot =>(Math.Abs(pos.Y - dot.Info.Position.Y * _zoomScale) <= 5) && (!dot.Equals(curDot))).ToList();
+
+            var dotsXList = _dots.Where(dot => (Math.Abs(mousePos.X - dot.Info.Position.X * _zoomScale) <= 5) && (!dot.Equals(curDot))).ToList();
+            var dotsYList = _dots.Where(dot => (Math.Abs(mousePos.Y - dot.Info.Position.Y * _zoomScale) <= 5) && (!dot.Equals(curDot))).ToList();
 
             if (dotsXList.Count > 0)
             {
-                foreach (var dot in dotsXList)
+                var sortedList = dotsXList.OrderBy(dot => Math.Abs(dot.Info.Position.X * _zoomScale - mousePos.X))
+                    .ThenBy(dot => Math.Abs(dot.Info.Position.Y * _zoomScale - mousePos.Y)).ToList();
+                dotX1 = sortedList.First();
+                mousePos.X = dotX1.Info.Position.X * _zoomScale;
+
+                sortedList.Remove(dotX1);
+                foreach (var dot in sortedList)
                 {
-                    if (dotX1 != null)
-                    {
-                        if (Math.Abs(dot.Info.Position.X * _zoomScale - pos.X) < Math.Abs(dotX1.Info.Position.X * _zoomScale - pos.X))
-                            dotX1 = dot;
-                    }
-                    else
-                    {
-                        dotX1 = dot;
-                    }
-                }
-                dotsXList.Remove(dotX1);
-                foreach (var dot in dotsXList)
-                {
-                    if (Math.Abs(Math.Abs(dotX1.Info.Position.X * _zoomScale - dot.Info.Position.X * _zoomScale) - Math.Abs(dotX1.Info.Position.X * _zoomScale - pos.X)) <= 5)
-                    {
-                        dotY2 = dot;
-                        pos.X = dotX1.Info.Position.X * _zoomScale + (dotX1.Info.Position.X * _zoomScale - dotY2.Info.Position.X * _zoomScale);
-                    }
+                    if (!(Math.Abs(Math.Abs(dotX1.Info.Position.Y * _zoomScale - dot.Info.Position.Y * _zoomScale) -
+                                   Math.Abs(dotX1.Info.Position.Y * _zoomScale - mousePos.Y)) <= 5)) continue;
+                    dotY2 = dot;
+                    mousePos.Y = dotX1.Info.Position.Y * _zoomScale + (dotX1.Info.Position.Y - dotY2.Info.Position.Y) * _zoomScale;
                 }
             }
             if (dotsYList.Count > 0)
             {
-                foreach (var dot in dotsYList)
+                var sortedList = dotsYList.OrderBy(dot => Math.Abs(dot.Info.Position.Y * _zoomScale - mousePos.Y))
+                    .ThenBy(dot => Math.Abs(dot.Info.Position.X * _zoomScale - mousePos.X)).ToList();
+                dotY1 = sortedList.First();
+                mousePos.Y = dotY1.Info.Position.Y * _zoomScale;
+
+
+                sortedList.Remove(dotY1);
+                foreach (var dot in sortedList)
                 {
-                    if (dotY1 != null)
-                    {
-                        if (Math.Abs(dot.Info.Position.Y * _zoomScale - pos.Y) < Math.Abs(dotY1.Info.Position.Y * _zoomScale - pos.Y))
-                            dotY1 = dot;
-                    }
-                    else
-                    {
-                        dotY1 = dot;
-                    }
-                }
-                dotsYList.Remove(dotY1);
-                foreach (var dot in dotsYList)
-                {
-                    if (Math.Abs(Math.Abs(dotY1.Info.Position.Y * _zoomScale - dot.Info.Position.Y * _zoomScale) - Math.Abs(dotY1.Info.Position.Y * _zoomScale - pos.Y)) <= 5)
-                    {
-                        dotX2 = dot;
-                        pos.Y = (dotY1.Info.Position.Y + (dotY1.Info.Position.Y - dotX2.Info.Position.Y)) * _zoomScale;
-                    }
+                    if (!(Math.Abs(Math.Abs(dotY1.Info.Position.X * _zoomScale - dot.Info.Position.X * _zoomScale) -
+                                   Math.Abs(dotY1.Info.Position.X * _zoomScale - mousePos.X)) <= 5)) continue;
+                    dotX2 = dot;
+                    mousePos.X = (dotY1.Info.Position.X + (dotY1.Info.Position.X - dotX2.Info.Position.X)) * _zoomScale;
                 }
             }
             if (dotX1 != null)
@@ -876,19 +864,19 @@ namespace CpldUI.CheckManager.GraphCheck
                 {
                     X1 = dotX1.Info.Position.X * _zoomScale,
                     Y1 = dotX1.Info.Position.Y * _zoomScale,
-                    X2 = pos.X - dotX1.Info.Position.X * _zoomScale + dotX1.Info.Position.X * _zoomScale,
-                    Y2 = 0 + dotX1.Info.Position.Y * _zoomScale,
+                    X2 = mousePos.X - dotX1.Info.Position.X * _zoomScale + dotX1.Info.Position.X * _zoomScale,
+                    Y2 = mousePos.Y - dotX1.Info.Position.Y * _zoomScale + dotX1.Info.Position.Y * _zoomScale,
                     StrokeThickness = 2,
-                    Stroke = new SolidColorBrush(Colors.Red)
+                    Stroke = new SolidColorBrush(Colors.Blue)
                 });
                 if (dotY2 != null)
                 {
                     _auxiliaryLineCanvas.Children.Add(new Line
                     {
-                        X1 = dotY2.Info.Position.X * _zoomScale,
-                        Y1 = dotY2.Info.Position.Y * _zoomScale - 25,
-                        X2 = 0 + dotY2.Info.Position.X * _zoomScale,
-                        Y2 = 50 + dotY2.Info.Position.Y * _zoomScale - 25,
+                        X1 = dotY2.Info.Position.X * _zoomScale - 25,
+                        Y1 = dotY2.Info.Position.Y * _zoomScale,
+                        X2 = 50 + dotY2.Info.Position.X * _zoomScale - 25,
+                        Y2 = 0 + dotY2.Info.Position.Y * _zoomScale,
                         StrokeThickness = 2,
                         Stroke = new SolidColorBrush(Colors.Red)
                     });
@@ -901,28 +889,28 @@ namespace CpldUI.CheckManager.GraphCheck
                 {
                     X1 = dotY1.Info.Position.X * _zoomScale,
                     Y1 = dotY1.Info.Position.Y * _zoomScale,
-                    X2 = 0 + dotY1.Info.Position.X * _zoomScale,
-                    Y2 = pos.Y - dotY1.Info.Position.Y * _zoomScale + dotY1.Info.Position.Y * _zoomScale,
+                    X2 = mousePos.X - dotY1.Info.Position.X * _zoomScale + dotY1.Info.Position.X * _zoomScale,
+                    Y2 = mousePos.Y - dotY1.Info.Position.Y * _zoomScale + dotY1.Info.Position.Y * _zoomScale,
                     StrokeThickness = 2,
-                    Stroke = new SolidColorBrush(Colors.Red)
+                    Stroke = new SolidColorBrush(Colors.Blue)
                 });
-                
+
                 if (dotX2 != null)
                 {
                     _auxiliaryLineCanvas.Children.Add(new Line
                     {
-                        X1 = dotX2.Info.Position.X * _zoomScale - 25,
-                        Y1 = dotX2.Info.Position.Y * _zoomScale,
-                        X2 = 50 + dotX2.Info.Position.X * _zoomScale - 25,
-                        Y2 = 0 + dotX2.Info.Position.Y * _zoomScale,
+                        X1 = dotX2.Info.Position.X * _zoomScale,
+                        Y1 = dotX2.Info.Position.Y * _zoomScale - 25,
+                        X2 = 0 + dotX2.Info.Position.X * _zoomScale,
+                        Y2 = 50 + dotX2.Info.Position.Y * _zoomScale - 25,
                         StrokeThickness = 2,
                         Stroke = new SolidColorBrush(Colors.Red)
                     });
                 }
-               
+
             }
-            
-            return pos;
+
+            return mousePos;
 
 
         }
@@ -959,6 +947,15 @@ namespace CpldUI.CheckManager.GraphCheck
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
+            WaitBox wb = null;
+            var t = new Thread(() =>
+            {
+                wb = new WaitBox();
+                wb.ShowDialog();//不能用Show
+            });
+            t.SetApartmentState(ApartmentState.STA);
+            t.Start();
+
             List<CircuitInfo> allCircuits;
             CacheGraph.GetCircuits(out allCircuits);
             var dbCircuits = allCircuits.Where(circuit => circuit.ParentCableId == Cable.CableId).ToList();
@@ -975,6 +972,7 @@ namespace CpldUI.CheckManager.GraphCheck
             CacheGraph.DelDots(dbDots.Except(curDots).ToList());
 
             CacheGraph.CacheSaveCable();
+            wb.Dispatcher.Invoke((Action)(() => wb.Close()));
             InfoBox.InfoMsg("保存成功");
         }
         
@@ -1006,14 +1004,7 @@ namespace CpldUI.CheckManager.GraphCheck
             if (btnButton == null) return;
             BtnCombineCircuit_Click(sender, e);
 
-            WaitBox wb = null;
-            var t = new Thread(() =>
-            {
-                wb = new WaitBox();
-                wb.ShowDialog();//不能用Show
-            });
-            t.SetApartmentState(ApartmentState.STA);
-            t.Start();
+
 
             bool isNoShortCircuit;
             List<List<string>> shortCircuitInfoResult;
@@ -1022,26 +1013,27 @@ namespace CpldUI.CheckManager.GraphCheck
             if (!CpldControl.Check.SampleCheck.BeginSampleCheck(out isNoShortCircuit, out shortCircuitInfoResult, out pointNo, out circuitNo))
             {
                 InfoBox.ErrorMsg("取样失败,请检查设备连接");
-                wb.Dispatcher.Invoke((Action)(() => wb.Close()));
                 return;
             }
             if (isNoShortCircuit)
             {
                 InfoBox.ErrorMsg("未检测到回路");
-                wb.Dispatcher.Invoke((Action)(() => wb.Close()));
                 return;
             }
+       
+
+            
             var errDot = "";
             foreach (var circuit in shortCircuitInfoResult)
             {
                 var info = new CircuitInfo
                 {
-                    ParentCableId = Cable.CableId, 
+                    ParentCableId = Cable.CableId,
                     CircuitId = _circuits.Max(x => x.Info.CircuitId) + 1
                 };
                 info.Name = "回路" + info.CircuitId;
-                var newCircuit = new Circuit(info);
-                GraphAddCircuit(newCircuit.Info);
+
+                var newCircuit = GraphAddCircuit(info);
                 foreach (var dot in circuit)
                 {
                     if (_phyAddrMapToDot.ContainsKey(dot))
@@ -1051,11 +1043,16 @@ namespace CpldUI.CheckManager.GraphCheck
                 }
             }
             ResetLayers();
-            wb.Dispatcher.Invoke((Action)(() => wb.Close()));
-            if (string.IsNullOrEmpty(errDot)) return;
+            if (string.IsNullOrEmpty(errDot))
+            {
+                InfoBox.InfoMsg("取样成功，请保存");
+                return;
+            }
             errDot = errDot.Remove(errDot.Length - 1, 1);
             errDot += "在图中未找到";
             InfoBox.ErrorMsg(errDot);
+       
+            
         }
 
         private void PointSearch() //use device to search point

@@ -28,3 +28,10 @@ C:\Users\MrChi\Desktop\CHI\CPLD\CpldLog\bin\Debug\log4net.xml
 C:\Users\MrChi\Desktop\CHI\CPLD\CpldLog\obj\Debug\CpldLog.dll
 C:\Users\MrChi\Desktop\CHI\CPLD\CpldLog\obj\Debug\CpldLog.pdb
 C:\Users\MrChi\Desktop\CHI\CPLD\CpldLog\obj\Debug\CpldLog.csprojResolveAssemblyReference.cache
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldLog\bin\Debug\CpldLog.dll
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldLog\bin\Debug\CpldLog.pdb
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldLog\bin\Debug\log4net.dll
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldLog\bin\Debug\log4net.xml
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldLog\obj\Debug\CpldLog.csprojResolveAssemblyReference.cache
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldLog\obj\Debug\CpldLog.dll
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldLog\obj\Debug\CpldLog.pdb

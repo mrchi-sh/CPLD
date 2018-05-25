@@ -37,7 +37,8 @@
         </GroupBox>
         <Grid Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
@@ -45,9 +46,12 @@
                    Foreground="Red" Background="Yellow" 
                    VerticalAlignment="Center"  HorizontalContentAlignment="Center"/>
             <Button FontSize="16" Grid.Column="1"  Margin="10,20"
+                    Background="Orange"   IsDefault="True"
+                    Content="点搜索"  Name="BtnPointSearch" Click="btnPointSearch_Click"/>
+            <Button FontSize="16" Grid.Column="2"  Margin="10,20"
                     Background="LightGreen"   IsDefault="True"
                     Content="开始"  Name="BtnOk" Click="btnOk_Click"/>
-            <Button FontSize="16" Grid.Column="2" Margin="10,20"
+            <Button FontSize="16" Grid.Column="3" Margin="10,20"
                     Background="LightPink" IsCancel="True"
                     Content="关闭"/>
         </Grid>

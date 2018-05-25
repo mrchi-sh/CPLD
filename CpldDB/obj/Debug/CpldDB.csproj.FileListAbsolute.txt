@@ -53,3 +53,15 @@ C:\Users\MrChi\Desktop\CHI\CPLD\CpldDB\bin\Debug\log4net.xml
 C:\Users\MrChi\Desktop\CHI\CPLD\CpldDB\obj\Debug\CpldDB.dll
 C:\Users\MrChi\Desktop\CHI\CPLD\CpldDB\obj\Debug\CpldDB.pdb
 C:\Users\MrChi\Desktop\CHI\CPLD\CpldDB\bin\Debug\CpldLog.pdb
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldDB\bin\Debug\CpldDB.dll.config
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldDB\bin\Debug\CpldDB.dll
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldDB\bin\Debug\CpldDB.pdb
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldDB\bin\Debug\CpldBase.dll
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldDB\bin\Debug\CpldLog.dll
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldDB\bin\Debug\log4net.dll
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldDB\bin\Debug\CpldBase.pdb
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldDB\bin\Debug\CpldLog.pdb
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldDB\bin\Debug\log4net.xml
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldDB\obj\Debug\CpldDB.csprojResolveAssemblyReference.cache
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldDB\obj\Debug\CpldDB.dll
+C:\Users\MrChi\Documents\GitHub\CPLD\CpldDB\obj\Debug\CpldDB.pdb

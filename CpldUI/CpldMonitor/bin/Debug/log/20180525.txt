@@ -1,0 +1,66 @@
+
+ 
+记录时间：2018-05-25 10:03:48,035 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-25 10:03:49,061 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-25 10:03:54,920 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-25 10:03:54,920 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Send fail
+ 
+
+ 
+记录时间：2018-05-25 10:04:08,011 
+线程ID:[13] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.100.200:2016
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 CpldSocket.CpldSocket.ConnectCallBack(IAsyncResult ar) 位置 c:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\CpldSocket.cs:行号 84
+ 
+
+ 
+记录时间：2018-05-25 10:04:09,087 
+线程ID:[13] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.100.200:2016
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 CpldSocket.CpldSocket.ConnectCallBack(IAsyncResult ar) 位置 c:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\CpldSocket.cs:行号 84
+ 
+
+ 
+记录时间：2018-05-25 15:07:41,858 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：db operation error
+ 
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 CpldDB.DbCommon.QueryData(String querySql, DataTable& dt) 位置 c:\Users\MrChi\Documents\GitHub\CPLD\CpldDB\DbCommon.cs:行号 37
