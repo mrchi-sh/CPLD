@@ -8,7 +8,7 @@ namespace CpldBase
         public static int ServerPort = 2016;
 
         public static string DbName = "tds_data";
-        public static string DbHost = "192.168.100.100";
+        public static string DbHost = "127.0.0.1";
         public static string DbUser = "root";
         public static string DbPsasword = "asdfghjkl";
 

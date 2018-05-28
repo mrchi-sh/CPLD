@@ -47,15 +47,6 @@ namespace CpldDB
         }
     }
     
-    public class CheckItem
-    {
-        public string ItemName { get; set; }
-        public string CheckMethod { get; set; }
-        public string Username { get; set; }
-        public string OkTime { get; set; }
-        public string NgTime { get; set; }
-        public string CreateDate { get; set; }
-    }
 
     public class CheckItemExt
     {

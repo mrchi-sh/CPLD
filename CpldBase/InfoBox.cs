@@ -28,11 +28,10 @@ namespace CpldBase
             var shortCircuit = "";
             var openCircuit = "";
             var openCircuitIndex = 0;
-            var checkStatus = "";
 
             resultString = "";
 
-            checkStatus = isCheckOk ? "OK" : "NG";
+            var checkStatus = isCheckOk ? "OK" : "NG";
 
             foreach (var tmpList in shortCircuitList)
             {

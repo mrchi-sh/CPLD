@@ -1,0 +1,94 @@
+
+ 
+记录时间：2018-05-28 12:32:58,307 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-28 12:32:59,328 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-28 12:34:33,272 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：db operation error
+ 
+MySql.Data.MySqlClient.MySqlException (0x80004005): Host 'DESKTOP-6DBL2U6' is not allowed to connect to this MySQL server
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 CpldDB.DbCommon.QueryData(String querySql, DataTable& dt) 位置 c:\Users\MrChi\Documents\GitHub\CPLD\CpldDB\DbCommon.cs:行号 37
+
+ 
+记录时间：2018-05-28 12:34:34,433 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：db operation error
+ 
+MySql.Data.MySqlClient.MySqlException (0x80004005): Host 'DESKTOP-6DBL2U6' is not allowed to connect to this MySQL server
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 CpldDB.DbCommon.QueryData(String querySql, DataTable& dt) 位置 c:\Users\MrChi\Documents\GitHub\CPLD\CpldDB\DbCommon.cs:行号 37
+
+ 
+记录时间：2018-05-28 12:34:54,087 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-28 12:34:55,095 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-28 14:19:01,647 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-28 14:19:02,673 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-28 14:19:08,674 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 
+
+ 
+记录时间：2018-05-28 14:19:09,672 
+线程ID:[8] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：connect time out
+ 

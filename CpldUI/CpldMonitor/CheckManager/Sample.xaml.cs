@@ -11,15 +11,25 @@ using CpldUI.CheckManager.Base;
 
 namespace CpldUI.CheckManager
 {
-    public class SampleViewModel
+    public class SampleViewModel : BindableObject
     {
         private List<List<string>> _shortCircuitInfoResult;
+        private int _pointCount;
+        private int _circuitCount;
 
         public CableInfo CableInfo { get; set; }
         public UserInfo UserInfo { get; set; }
         public ObservableCollection<BindCheckResult> CheckResults { get; set; }
-        public int PointCount { get; set; }
-        public int CircuitCount { get; set; }
+        public int PointCount
+        {
+            get { return _pointCount; }
+            set { SetProperty(ref _pointCount, value); }
+        }
+        public int CircuitCount
+        {
+            get { return _circuitCount; }
+            set { SetProperty(ref _circuitCount, value); }
+        }
 
         public bool Sample()
         {
@@ -111,10 +121,7 @@ namespace CpldUI.CheckManager
             return true;
         }
     }
-
-    /// <summary>
-    /// Sample.xaml 的交互逻辑
-    /// </summary>
+    
     public partial class Sample : Window
     {
         private readonly SampleViewModel _viewModel;

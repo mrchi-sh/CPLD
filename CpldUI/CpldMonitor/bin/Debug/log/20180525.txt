@@ -64,3 +64,292 @@ MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of 
    在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
    在 MySql.Data.MySqlClient.MySqlConnection.Open()
    在 CpldDB.DbCommon.QueryData(String querySql, DataTable& dt) 位置 c:\Users\MrChi\Documents\GitHub\CPLD\CpldDB\DbCommon.cs:行号 37
+
+ 
+记录时间：2018-05-25 16:39:29,628 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 CpldSocket.CpldSocket.Receive(List`1& recvList) 位置 c:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\CpldSocket.cs:行号 128
+
+ 
+记录时间：2018-05-25 16:39:29,628 
+线程ID:[10] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 一个封锁操作被对 WSACancelBlockingCall 的调用中断。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 CpldSocket.CpldSocket.Receive(List`1& recvList) 位置 c:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\CpldSocket.cs:行号 128
+
+ 
+记录时间：2018-05-25 16:39:29,701 
+线程ID:[10] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：result null or resultdata length < 8
+ 
+
+ 
+记录时间：2018-05-25 16:39:29,700 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：result null or resultdata length < 8
+ 
+
+ 
+记录时间：2018-05-25 16:40:08,228 
+线程ID:[10] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 一个封锁操作被对 WSACancelBlockingCall 的调用中断。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 CpldSocket.CpldSocket.Receive(List`1& recvList) 位置 c:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\CpldSocket.cs:行号 128
+
+ 
+记录时间：2018-05-25 16:40:08,229 
+线程ID:[10] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：result null or resultdata length < 8
+ 
+
+ 
+记录时间：2018-05-25 16:40:08,228 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 CpldSocket.CpldSocket.Receive(List`1& recvList) 位置 c:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\CpldSocket.cs:行号 128
+
+ 
+记录时间：2018-05-25 16:40:08,232 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：result null or resultdata length < 8
+ 
+
+ 
+记录时间：2018-05-25 16:53:17,008 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.UriFormatException: 无效的 URI: Dos 路径必须是根路径，例如，“c:\”。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 CpldUI.CheckManager.GraphCheck.GraphicalCableCheck.InitBgConfig() 位置 c:\Users\MrChi\Documents\GitHub\CPLD\CpldUI\CpldMonitor\CheckManager\GraphCheck\GraphicalCableCheck.xaml.cs:行号 115
+
+ 
+记录时间：2018-05-25 16:53:24,278 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：图片选择错误或丢失System.UriFormatException: 无效的 URI: Dos 路径必须是根路径，例如，“c:\”。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 CpldUI.CheckManager.GraphCheck.GraphicalConfigCable.ChangeImg() 位置 c:\Users\MrChi\Documents\GitHub\CPLD\CpldUI\CpldMonitor\CheckManager\GraphCheck\GraphicalConfigCable.xaml.cs:行号 202
+ 
+
+ 
+记录时间：2018-05-25 16:53:58,436 
+线程ID:[20] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 CpldSocket.CpldSocket.Receive(List`1& recvList) 位置 c:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\CpldSocket.cs:行号 128
+
+ 
+记录时间：2018-05-25 16:53:58,441 
+线程ID:[20] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Receive Fail
+ 
+
+ 
+记录时间：2018-05-25 16:54:15,148 
+线程ID:[14] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 CpldSocket.CpldSocket.Receive(List`1& recvList) 位置 c:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\CpldSocket.cs:行号 128
+
+ 
+记录时间：2018-05-25 16:54:15,151 
+线程ID:[14] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Receive Fail
+ 
+
+ 
+记录时间：2018-05-25 16:54:18,619 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer)
+   在 CpldSocket.CpldSocket.Send(Byte[] data) 位置 c:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\CpldSocket.cs:行号 166
+
+ 
+记录时间：2018-05-25 16:54:18,634 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：receive timeout
+ 
+
+ 
+记录时间：2018-05-25 16:54:18,634 
+线程ID:[9] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Send fail
+ 
+
+ 
+记录时间：2018-05-25 16:54:37,295 
+线程ID:[10] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 CpldSocket.CpldSocket.Receive(List`1& recvList) 位置 c:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\CpldSocket.cs:行号 128
+
+ 
+记录时间：2018-05-25 16:54:37,297 
+线程ID:[10] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Receive Fail
+ 
+
+ 
+记录时间：2018-05-25 16:54:54,372 
+线程ID:[27] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 CpldSocket.CpldSocket.Receive(List`1& recvList) 位置 c:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\CpldSocket.cs:行号 128
+
+ 
+记录时间：2018-05-25 16:54:54,374 
+线程ID:[27] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Receive Fail
+ 
+
+ 
+记录时间：2018-05-25 16:55:08,293 
+线程ID:[24] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 CpldSocket.CpldSocket.Receive(List`1& recvList) 位置 c:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\CpldSocket.cs:行号 128
+
+ 
+记录时间：2018-05-25 16:55:08,294 
+线程ID:[24] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Receive Fail
+ 
+
+ 
+记录时间：2018-05-25 16:55:29,809 
+线程ID:[33] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 CpldSocket.CpldSocket.Receive(List`1& recvList) 位置 c:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\CpldSocket.cs:行号 128
+
+ 
+记录时间：2018-05-25 16:55:29,811 
+线程ID:[33] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Receive Fail
+ 
+
+ 
+记录时间：2018-05-25 16:55:43,520 
+线程ID:[27] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 CpldSocket.CpldSocket.Receive(List`1& recvList) 位置 c:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\CpldSocket.cs:行号 128
+
+ 
+记录时间：2018-05-25 16:55:43,522 
+线程ID:[27] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Receive Fail
+ 
+
+ 
+记录时间：2018-05-25 16:55:57,202 
+线程ID:[19] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Error
+ 
+System.Net.Sockets.SocketException (0x80004005): 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.Socket.Receive(Byte[] buffer)
+   在 CpldSocket.CpldSocket.Receive(List`1& recvList) 位置 c:\Users\MrChi\Documents\GitHub\CPLD\CpldSocket\CpldSocket.cs:行号 128
+
+ 
+记录时间：2018-05-25 16:55:57,204 
+线程ID:[19] 
+日志级别：  ERROR 
+类：CPLD.Logging property: [(null)] - 
+描述：Receive Fail
+ 

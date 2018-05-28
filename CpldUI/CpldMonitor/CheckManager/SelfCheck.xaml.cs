@@ -4,11 +4,9 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using System.Windows;
-using System.Windows.Data;
 using CpldBase;
 using CpldControl.Check;
 using CpldDB;
-using CpldUI.Check;
 
 namespace CpldUI.CheckManager
 {

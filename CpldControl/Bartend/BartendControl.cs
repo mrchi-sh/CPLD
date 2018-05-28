@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.IO;
 using System.Diagnostics;
@@ -74,6 +72,7 @@ namespace CpldControl.Bartend
             WriteBartendTxtFile(itemName, dt);
             return true;
         }
+        
         public static void OpenBartendFile(string btwFileName)
         {
             try
